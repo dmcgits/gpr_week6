@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveButtonClick : MonoBehaviour {
+public class TriggerMoveEventOnClick : MonoBehaviour {
 	public static event Action<string> OnMoveRequested = delegate {};
 	
 	public string wayToMove = "no_event";

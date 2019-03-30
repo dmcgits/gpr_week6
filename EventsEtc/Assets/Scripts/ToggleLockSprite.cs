@@ -5,9 +5,16 @@ using UnityEngine;
 public class ToggleLockSprite : MonoBehaviour {
 
 	protected Renderer _renderer;
-	// Use this for initialization
+    // Use this for initialization
+    private void Awake()
+    {
+        // Using awake here because in Start it was sometimes not
+        // ready when the first SendMessage came in
+        _renderer = gameObject.GetComponent<Renderer>();
+    }
+    
 	void Start () {
-		_renderer = gameObject.GetComponent<Renderer>();
+		
 	}
 	
 	public void SetLockedState(bool state)
@@ -19,26 +26,7 @@ public class ToggleLockSprite : MonoBehaviour {
 			_renderer.enabled = !state;
 		}
 	}
-	public void Lock()
-	{
-		if (gameObject.name == "lock_closed")
-		{
-			_renderer.enabled = true;
-		} else if (gameObject.name == "lock_open") {
-			_renderer.enabled = false;
-		}
-	}
-
-	public void Unlock()
-	{
-		if (gameObject.name == "lock_closed")
-		{
-			_renderer.enabled = false;
-		} else if (gameObject.name == "lock_open")
-		{
-			_renderer.enabled = true;
-		}
-	}
+	
 	// Update is called once per frame
 	void Update () {
 		
