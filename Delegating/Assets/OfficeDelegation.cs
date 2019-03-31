@@ -20,8 +20,8 @@ public class OfficeDelegation : MonoBehaviour {
         sandrasCreditedWork = SharmeensConstanstEfforts;
         sandrasCreditedWork("sheduling work for her 60 staff.");
 
-        sandrasCreditedWork = LayleysEvenings;
-        sandrasCreditedWork("signing off expenditures from her 35 managers.");
+        sandrasCreditedWork = MaureensEvenings;
+        sandrasCreditedWork("ghost writing her emails.");
     }
 	
     void GeraldsTimeEnergy(string task)
@@ -31,11 +31,11 @@ public class OfficeDelegation : MonoBehaviour {
 
     protected void SharmeensConstanstEfforts(string task)
     {
-        Debug.Log("\"Sandra is the worst,\" groans Sharmeen to her older colleague Layley, \"I'm constantly " + task + "\"");
+        Debug.Log("\"Sandra is the worst,\" groans Sharmeen to her older colleague Maureen, \"I'm constantly " + task + "\"");
     }
 
-    protected void LayleysEvenings(string task)
+    protected void MaureensEvenings(string task)
     {
-        Debug.Log("\"Get used to it babe, I'd have a degree and a real job somewhere if I hadn't spent my evenings " + task + "\" Layley reminds Sharmeen.");
+        Debug.Log("\"Yeah.. One day you'll be 45, still " + task + "\" Maureen replies distantly.");
     }
 }
