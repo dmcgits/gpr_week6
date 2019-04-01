@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OfficeDelegation : MonoBehaviour {
 
-    delegate void BossSandrasCreditedWork(string task);
-    BossSandrasCreditedWork sandrasCreditedWork;
+    delegate void BossWork(string task);
+    BossWork bossSandrasWork;
 
 	// Use this for initialization
 	void Start () {
@@ -14,14 +14,14 @@ public class OfficeDelegation : MonoBehaviour {
         Debug.Log("What are they chatting about?");
 
         Debug.Log("   ");
-        sandrasCreditedWork = GeraldsTimeEnergy;
-        sandrasCreditedWork("writing her proposals.");
+        bossSandrasWork = GeraldsTimeEnergy;
+        bossSandrasWork("writing her proposals.");
 
-        sandrasCreditedWork = SharmeensConstanstEfforts;
-        sandrasCreditedWork("sheduling work for her 60 staff.");
+        bossSandrasWork = SharmeensConstanstEfforts;
+        bossSandrasWork("sheduling work for her 60 staff.");
 
-        sandrasCreditedWork = MaureensEvenings;
-        sandrasCreditedWork("ghost writing her emails.");
+        bossSandrasWork = MaureensEvenings;
+        bossSandrasWork("ghost writing her emails.");
     }
 	
     void GeraldsTimeEnergy(string task)
